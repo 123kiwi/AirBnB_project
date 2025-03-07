@@ -1007,6 +1007,7 @@ elif page == pages[4]:
     )
 
     # Load the data
+    import pandas as pd
     file_path = r"AirBnB/df_last_encoding.csv"
     df_last_encoding = pd.read_csv(file_path)
 
