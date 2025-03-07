@@ -388,6 +388,7 @@ elif page == pages[3]:
     )
     import matplotlib.pyplot as plt
     import seaborn as sns
+    import pandas as pd
 
     # Load the data
     file_path_cleaned = "AirBnB/df_last_encoding_drop.csv"
