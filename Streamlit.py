@@ -129,7 +129,6 @@ elif page == pages[1]:
         """,
         unsafe_allow_html=True
     )
-    import streamlit as st
     import pandas as pd
 
     # Load the data
@@ -157,7 +156,6 @@ elif page == pages[1]:
     st.dataframe(df_display)
     # Display the shape of the full dataframe
     st.markdown(f"**Dataset Shape:** `{df.shape}` (rows, columns)")
-
 
     st.markdown(
         """
@@ -267,8 +265,6 @@ elif page == pages[1]:
 elif page == pages[2]:
     st.header("Data Cleaning & Preparation")
 
-
-
     # Section 6.1: Cleaning the Price Column
     st.subheader("💰Price Column ")
     st.markdown(
@@ -338,8 +334,6 @@ elif page == pages[2]:
     unsafe_allow_html=True
     )
 
-    import pandas as pd
-
     # Load the cleaned and pre-processed data
     file_path_cleaned = "AirBnB/df_last_encoding_drop.csv"
     df_cleaned = pd.read_csv(file_path_cleaned)
@@ -368,8 +362,6 @@ elif page == pages[2]:
     # Display the shape of the full dataframe
     st.markdown(f"**Dataset Shape:** `{df_cleaned.shape}` (rows, columns)")
 
-  
-
 #______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 elif page == pages[3]:
     st.header("Exploratory Data Visualization")
@@ -394,15 +386,12 @@ elif page == pages[3]:
     """,
     unsafe_allow_html=True
     )
-    import pandas as pd
     import matplotlib.pyplot as plt
     import seaborn as sns
-    import streamlit as st
 
     # Load the data
     file_path_cleaned = "AirBnB/df_last_encoding_drop.csv"
     df_final = pd.read_csv(file_path_cleaned)
-
 
 
     # Create a container for the side-by-side plots
@@ -479,9 +468,6 @@ elif page == pages[3]:
         unsafe_allow_html=True
     )
 
-    import streamlit as st
-    import matplotlib.pyplot as plt
-    import pandas as pd
     # Load the cleaned and pre-processed data
     file_path_cleaned = "AirBnB/df_last_encoding.csv"
     df_cleaned = pd.read_csv(file_path_cleaned)
@@ -511,8 +497,6 @@ elif page == pages[3]:
 
     # Display the plot in Streamlit
     st.pyplot(plt.gcf())
-
-
 
     st.write(
     """
@@ -544,9 +528,6 @@ elif page == pages[3]:
     unsafe_allow_html=True
     )
 
-    import streamlit as st
-    import pandas as pd
-    import matplotlib.pyplot as plt
     import numpy as np
 
     # Load the data
@@ -641,10 +622,7 @@ elif page == pages[3]:
     )
 
     import plotly.express as px
-    import pandas as pd
-    import numpy as np
-    import streamlit as st
-
+   
     # Load the data
     file_path = "AirBnB/df_last_encoding.csv"
     df_filtered = pd.read_csv(file_path)
@@ -735,10 +713,6 @@ elif page == pages[3]:
         unsafe_allow_html=True
     )
 
-    import streamlit as st
-    import pandas as pd
-    import matplotlib.pyplot as plt
-
     # Load the data
     file_path = "AirBnB/df_last_encoding.csv"
     df_filtered = pd.read_csv(file_path)
@@ -805,10 +779,6 @@ elif page == pages[3]:
         """,
         unsafe_allow_html=True
     )
-
-    import streamlit as st
-    import plotly.express as px
-    import pandas as pd
 
     # Load the data
     file_path = "AirBnB/df_last_encoding.csv"
@@ -896,12 +866,7 @@ elif page == pages[3]:
 
 # Disciances catrgories 
 
-    import streamlit as st
-    import matplotlib.pyplot as plt
-    import seaborn as sns
-    import pandas as pd
     from matplotlib.colors import LinearSegmentedColormap
-    import numpy as np
 
     # Load the data
     file_path = "AirBnB/df_last_encoding.csv"
@@ -956,7 +921,6 @@ elif page == pages[3]:
         ax.set_ylim(0, y_max)
         ax.set_yticks(np.arange(0, y_max + 1, 50))
 
-
     landmark = st.selectbox(
         "Select a landmark to view price distribution:",
         ("Eiffel Tower", "Notre-Dame Cathedral", "Louvre Museum")
@@ -1010,7 +974,6 @@ elif page == pages[3]:
     st.pyplot(plt.gcf())
 
 
-
     st.markdown(
         """
         <div style="text-align: justify;">
@@ -1041,8 +1004,6 @@ elif page == pages[4]:
         """,
         unsafe_allow_html=True
     )
-    import streamlit as st
-    import pandas as pd
 
     # Load the data
     file_path = r"AirBnB/df_last_encoding.csv"
@@ -1092,7 +1053,6 @@ elif page == pages[4]:
         unsafe_allow_html=True
     )
 
-
     st.subheader("📊 Visualizing Price Distribution")
 
     st.markdown(
@@ -1105,11 +1065,6 @@ elif page == pages[4]:
         """,
         unsafe_allow_html=True
     )
-
-    import streamlit as st
-    import pandas as pd
-    import matplotlib.pyplot as plt
-    import seaborn as sns
 
     # Load the data
     file_path = r"AirBnB/df_last_encoding.csv"
@@ -1148,8 +1103,6 @@ elif page == pages[4]:
     # Display the plot in Streamlit
     st.pyplot(plt.gcf())
 
-
-
 #______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 elif page == pages[5]:
     st.header(" Machine Learning Models")
@@ -1168,7 +1121,6 @@ elif page == pages[5]:
         unsafe_allow_html=True
     )
 
-    from PIL import Image
     import os
 
     # Define the path to the images folder
@@ -1208,8 +1160,6 @@ elif page == pages[5]:
 
     st.subheader("🎯 Classification Model Evaluation")
 
-    import streamlit as st
-
 
     st.markdown(
     """
@@ -1238,10 +1188,6 @@ elif page == pages[5]:
         unsafe_allow_html=True
     )
 
-        
-    from PIL import Image
-
-
     st.markdown(
         """
         <div style="text-align: justify;">
@@ -1258,7 +1204,6 @@ elif page == pages[5]:
     st.image(image, caption="Confusion Matrix for Price Classification Model", use_container_width=True)
 
 
-    
     st.markdown(
         """
         <div style="text-align: justify;">
@@ -1272,25 +1217,15 @@ elif page == pages[5]:
         unsafe_allow_html=True
     )
 
-    from PIL import Image
-    import streamlit as st
-
     # Define the path to the image
     image_path = "AirBnB/Accuracy.png"
 
     # Display the image with a caption
     st.image(image_path, caption="Classification Model Accuracy", use_container_width=True)
 
-
-
-
-
-
 #______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 elif page == pages[6]:
     st.header("Prediction")
-
-    import streamlit as st
 
     st.markdown("""
 
@@ -1305,9 +1240,7 @@ The model effectively leveraged these variables to provide accurate price predic
         unsafe_allow_html=True
     )
 
-    import streamlit as st
     import pickle
-    import numpy as np
 
     # Load the trained Random Forest Regression model from the pickle file
     model_path = "AirBnB/random_forest_model.pkl"
@@ -1364,8 +1297,6 @@ The model effectively leveraged these variables to provide accurate price predic
     if st.button("Predict Price"):
         predicted_price = model.predict([input_features])[0]
         st.success(f"Predicted Airbnb Price: ${predicted_price:.2f}")
-
-
 
 
 #______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
