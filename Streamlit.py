@@ -335,6 +335,7 @@ elif page == pages[2]:
     )
 
     # Load the cleaned and pre-processed data
+    import pandas as pd
     file_path_cleaned = "AirBnB/df_last_encoding_drop.csv"
     df_cleaned = pd.read_csv(file_path_cleaned)
 
