@@ -1096,6 +1096,7 @@ elif page == pages[4]:
 
     # Plot the histogram and probability density function for the 'price' column
     import matplotlib.pyplot as plt
+    import seaborn as sns
     plt.figure(figsize=(10, 6))
     sns.histplot(df['price'], kde=True, color="#FF5A5F")
     plt.xlabel('Price')
