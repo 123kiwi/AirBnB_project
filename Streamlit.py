@@ -1264,9 +1264,9 @@ The model effectively leveraged these variables to provide accurate price predic
     )
 
     # Input features
-    bathrooms_text = st.slider("Number of Bathrooms 🛁", min_value=0.0, max_value=10.0, step=0.5)
-    bedrooms = st.slider("Number of Bedrooms🛋️", min_value=0, max_value=10, step=1)
-    beds = st.slider("Number of Beds 🛏️", min_value=0, max_value=15, step=1)
+    bathrooms_text = st.slider("Number of Bathrooms 🛁", min_value=0.0, max_value=3.0, step=0.5)
+    bedrooms = st.slider("Number of Bedrooms🛋️", min_value=0, max_value=3, step=1)
+    beds = st.slider("Number of Beds 🛏️", min_value=0, max_value=6, step=1)
 
     property_type = st.selectbox("Property Type 🏘️", ["Entire Unit", "Private Room", "Shared Room"])
     property_type_grouped = {
